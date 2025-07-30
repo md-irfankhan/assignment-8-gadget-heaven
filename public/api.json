@@ -1,0 +1,322 @@
+ [
+    {
+      "product_id": "GAD1001",
+      "product_title": "Galaxy X30 Pro Smartphone",
+      "product_image": "https://fdn2.gsmarena.com/vv/bigpic/motorola-moto-x30-pro.jpg",
+      "category": "Smartphones",
+      "price": 899.99,
+      "description": "A flagship smartphone with a stunning 6.7-inch AMOLED display and quad-camera system.",
+      "Specification": [
+        { "key": "Display", "value": "6.7-inch AMOLED" },
+        { "key": "Storage", "value": "256 GB" },
+        { "key": "RAM", "value": "12 GB" },
+        { "key": "Battery", "value": "4500 mAh" }
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "GAD1002",
+      "product_title": "Orion Smartwatch S2",
+      "product_image": "https://m.media-amazon.com/images/I/41Q8y31By+L._SY300_SX300_.jpg",
+      "category": "Wearables",
+      "price": 249.50,
+      "description": "A sleek smartwatch with heart-rate monitoring, GPS, and 7-day battery life.",
+      "Specification": [
+        { "key": "Display", "value": "1.4-inch OLED" },
+        { "key": "Battery Life", "value": "7 days" },
+        { "key": "Water Resistance", "value": "5 ATM" },
+        { "key": "Connectivity", "value": "Bluetooth 5.0" }
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": "GAD1003",
+      "product_title": "Aura Wireless Earbuds",
+      "product_image": "https://m.media-amazon.com/images/I/61MEqB9MfML._SY450_.jpg",
+      "category": "Audio",
+      "price": 129.99,
+      "description": "True wireless earbuds with active noise cancellation and 24 hours total playtime.",
+      "Specification": [
+        { "key": "Noise Cancellation", "value": "Active" },
+        { "key": "Battery Life", "value": "6 h (earbuds) + 18 h (case)" },
+        { "key": "Water Resistance", "value": "IPX5" },
+        { "key": "Connectivity", "value": "Bluetooth 5.2" }
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "GAD1004",
+      "product_title": "Nebula 15-inch Laptop",
+      "product_image": "https://m.media-amazon.com/images/I/819gjFWWnPL._AC_SX425_.jpg",
+      "category": "Computing",
+      "price": 1199.00,
+      "description": "Ultra-slim laptop powered by Intel i7, 16 GB RAM, 512 GB SSD, with backlit keyboard.",
+      "Specification": [
+        { "key": "CPU", "value": "Intel Core i7-1250U" },
+        { "key": "RAM", "value": "16 GB DDR4" },
+        { "key": "Storage", "value": "512 GB SSD" },
+        { "key": "Display", "value": "15.6-inch FHD IPS" }
+      ],
+      "availability": false,
+      "rating": 4.6
+    },
+    {
+      "product_id": "GAD1005",
+      "product_title": "PixelPad 11 Tablet",
+      "product_image": "https://m.media-amazon.com/images/I/71XySfAlGuL._AC_SL1500_.jpg",
+      "category": "Tablets",
+      "price": 499.00,
+      "description": "11-inch tablet with stylus support, quad-speaker audio, and 10 hours of battery life.",
+      "Specification": [
+        { "key": "Display", "value": "11-inch Retina" },
+        { "key": "Storage", "value": "128 GB" },
+        { "key": "Battery Life", "value": "10 hours" },
+        { "key": "OS", "value": "Android 12" }
+      ],
+      "availability": true,
+      "rating": 4.2
+    },
+    {
+      "product_id": "GAD1006",
+      "product_title": "Titan X Gaming Console",
+      "product_image": "https://www.boostboxx.com/en/media/catalog/product/cache/9/image/450x450/9df78eab33525d08d6e5fb8d27136e95/b/e/be_quiet_dark_base_pro_901-ww_gamestar_titan_x_rot_3000px.png",
+      "category": "Gaming",
+      "price": 399.99,
+      "description": "Next-gen gaming console with 4K HDR support and ultra-fast SSD.",
+      "Specification": [
+        { "key": "GPU", "value": "Custom AMD RDNA 2" },
+        { "key": "CPU", "value": "8-core AMD Zen 2" },
+        { "key": "Storage", "value": "1 TB SSD" },
+        { "key": "Resolution", "value": "Up to 4K HDR" }
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "GAD1007",
+      "product_title": "Reflex DSLR Camera",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/camera/dslr-camera/canon/2000d/2000d-01-228x228.webp",
+      "category": "Cameras",
+      "price": 899.00,
+      "description": "24MP DSLR with interchangeable lens mount and 4K video capture.",
+      "Specification": [
+        { "key": "Megapixels", "value": "24 MP" },
+        { "key": "Sensor", "value": "APS-C CMOS" },
+        { "key": "Lens Mount", "value": "EF-Mount" },
+        { "key": "Video", "value": "4K30fps" }
+      ],
+      "availability": false,
+      "rating": 4.4
+    },
+    {
+      "product_id": "GAD1008",
+      "product_title": "Lumi Portable Projector",
+      "product_image": "https://m.media-amazon.com/images/I/61sSCbAFjyL._AC_UY218_.jpg",
+      "category": "Home Theater",
+      "price": 299.95,
+      "description": "Compact LED projector with 1080p support and 200 ANSI lumens.",
+      "Specification": [
+        { "key": "Resolution", "value": "1080p" },
+        { "key": "Brightness", "value": "200 ANSI lumens" },
+        { "key": "Lamp Life", "value": "30,000 hours" },
+        { "key": "Connectivity", "value": "HDMI, USB, Wi-Fi" }
+      ],
+      "availability": true,
+      "rating": 4.1
+    },
+    {
+      "product_id": "GAD1009",
+      "product_title": "Echo Bluetooth Speaker",
+      "product_image": "https://m.media-amazon.com/images/G/01/kindle/journeys/D2Bb6cb9mxXTE2W2ArbpVWqLk0jtk108AKm1Ui7Ls0Y83D/MzE1ZmI4MDAt._CB542065580_.png",
+      "category": "Audio",
+      "price": 149.99,
+      "description": "Waterproof Bluetooth speaker with 12 hours of playtime and deep bass.",
+      "Specification": [
+        { "key": "Output Power", "value": "20 W" },
+        { "key": "Battery Life", "value": "12 hours" },
+        { "key": "Waterproof", "value": "IPX7" },
+        { "key": "Connectivity", "value": "Bluetooth 5.1" }
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "GAD1010",
+      "product_title": "SkyRider Drone",
+      "product_image": "https://m.media-amazon.com/images/I/71UmPtEk3GL._AC_UL320_.jpg",
+      "category": "Drones",
+      "price": 599.00,
+      "description": "Foldable drone with 4K camera, 30 min flight time, and obstacle avoidance.",
+      "Specification": [
+        { "key": "Camera", "value": "4K UHD" },
+        { "key": "Flight Time", "value": "30 minutes" },
+        { "key": "Range", "value": "6 km" },
+        { "key": "Weight", "value": "750 g" }
+      ],
+      "availability": false,
+      "rating": 4.6
+    },
+    {
+      "product_id": "GAD1011",
+      "product_title": "Vortex VR Headset",
+      "product_image": "https://vortexvr.eu/cdn/shop/products/new-elite-strap-for-meta-quest-3-158987_360x.jpg?v=1710374916",
+      "category": "Gaming",
+      "price": 349.99,
+      "description": "Wireless VR headset with 2160×2160 per-eye resolution and 90 Hz refresh rate.",
+      "Specification": [
+        { "key": "Resolution", "value": "2160×2160 per eye" },
+        { "key": "Refresh Rate", "value": "90 Hz" },
+        { "key": "Connectivity", "value": "Wi-Fi 6" },
+        { "key": "Tracking", "value": "Inside-out" }
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": "GAD1012",
+      "product_title": "Vault External Hard Drive",
+      "product_image": "https://m.media-amazon.com/images/I/71BG9q7OoNL._AC_SX425_.jpg",
+      "category": "Storage",
+      "price": 119.99,
+      "description": "2 TB portable HDD with USB-C interface and 5400 RPM speed.",
+      "Specification": [
+        { "key": "Capacity", "value": "2 TB" },
+        { "key": "Interface", "value": "USB-C" },
+        { "key": "Speed", "value": "5400 RPM" },
+        { "key": "Form Factor", "value": "2.5-inch" }
+      ],
+      "availability": true,
+      "rating": 4.0
+    },
+    {
+      "product_id": "GAD1013",
+      "product_title": "ChargeMaster Pro Power Bank",
+      "product_image": "https://m.media-amazon.com/images/I/61vXihj6QjL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+      "category": "Accessories",
+      "price": 59.99,
+      "description": "20,000 mAh power bank with dual fast-charge USB-C ports.",
+      "Specification": [
+        { "key": "Capacity", "value": "20,000 mAh" },
+        { "key": "Ports", "value": "2× USB-C, 1× USB-A" },
+        { "key": "Input", "value": "USB-C 45 W" },
+        { "key": "Weight", "value": "400 g" }
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "GAD1014",
+      "product_title": "FitPulse Fitness Tracker",
+      "product_image": "https://m.media-amazon.com/images/I/61C5hzuCWnL._AC_SX679_.jpg",
+      "category": "Wearables",
+      "price": 99.99,
+      "description": "Lightweight fitness tracker with sleep analysis, SpO₂ sensor, and 14 day battery.",
+      "Specification": [
+        { "key": "Display", "value": "0.96-inch OLED" },
+        { "key": "Battery Life", "value": "14 days" },
+        { "key": "Sensors", "value": "Heart-rate, SpO₂, Accelerometer" },
+        { "key": "Waterproof", "value": "IP68" }
+      ],
+      "availability": false,
+      "rating": 4.1
+    },
+    {
+      "product_id": "GAD1015",
+      "product_title": "Venom Gaming Mouse",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/mouse/fantech/venom-ii-wgc2/venom-ii-wgc2-01-500x500.jpg",
+      "category": "Gaming",
+      "price": 69.99,
+      "description": "Ergonomic gaming mouse with 16,000 DPI sensor and RGB lighting.",
+      "Specification": [
+        { "key": "DPI", "value": "Up to 16,000" },
+        { "key": "Buttons", "value": "8 programmable" },
+        { "key": "Connectivity", "value": "Wired USB" },
+        { "key": "Sensor", "value": "Optical PixArt PMW3389" }
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "GAD1016",
+      "product_title": "Mechanika Mechanical Keyboard",
+      "product_image": "https://vibegaming.com.bd/wp-content/uploads/2023/06/Untitled-design-7.png",
+      "category": "Accessories",
+      "price": 129.00,
+      "description": "Full-size mechanical keyboard with Cherry MX Brown switches and RGB backlight.",
+      "Specification": [
+        { "key": "Switch Type", "value": "Cherry MX Brown" },
+        { "key": "Key Rollover", "value": "NKRO" },
+        { "key": "Connectivity", "value": "USB-C" },
+        { "key": "Backlight", "value": "RGB per-key" }
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "GAD1017",
+      "product_title": "HomeLink Smart Hub",
+      "product_image": "https://www.aico.co.uk/homelink/wp-content/uploads/2023/09/EI1000G_MAIN-600x600-2.webp",
+      "category": "Home Automation",
+      "price": 179.99,
+      "description": "Voice-control hub compatible with Zigbee, Z-Wave, and Wi-Fi devices.",
+      "Specification": [
+        { "key": "Voice Assistant", "value": "Alexa, Google Assistant" },
+        { "key": "Connectivity", "value": "Wi-Fi, Zigbee, Z-Wave" },
+        { "key": "Compatibility", "value": "2000+ devices" },
+        { "key": "Privacy", "value": "Local voice processing" }
+      ],
+      "availability": false,
+      "rating": 4.2
+    },
+    {
+      "product_id": "GAD1018",
+      "product_title": "SwiftAction Action Camera",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/sjcam/sj4000-air/sj4000-air-01-228x228.webp",
+      "category": "Cameras",
+      "price": 229.99,
+      "description": "Rugged action camera shoots 4K60fps, waterproof to 30 m, with built-in stabilization.",
+      "Specification": [
+        { "key": "Video", "value": "4K60fps" },
+        { "key": "Waterproof", "value": "Up to 30 m" },
+        { "key": "Stabilization", "value": "Electronic" },
+        { "key": "Battery", "value": "1300 mAh" }
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "GAD1019",
+      "product_title": "ZapCharge Wireless Charger",
+      "product_image": "https://m.media-amazon.com/images/I/31x3PWRYDfL._AC_SX425_.jpg",
+      "category": "Accessories",
+      "price": 39.99,
+      "description": "15 W Qi-certified wireless charging pad with anti-slip surface.",
+      "Specification": [
+        { "key": "Output", "value": "15 W" },
+        { "key": "Compatibility", "value": "Qi-enabled devices" },
+        { "key": "Indicator", "value": "LED status light" },
+        { "key": "Surface", "value": "Anti-slip silicone" }
+      ],
+      "availability": true,
+      "rating": 4.0
+    },
+    {
+      "product_id": "GAD1020",
+      "product_title": "SilenceX Noise Cancelling Headphones",
+      "product_image": "https://m.media-amazon.com/images/I/61v8I23yUQL._AC_SX425_.jpg",
+      "category": "Audio",
+      "price": 199.99,
+      "description": "Over-ear headphones with hybrid noise cancellation and 30 hours playtime.",
+      "Specification": [
+        { "key": "Driver Size", "value": "40 mm" },
+        { "key": "Noise Cancellation", "value": "Hybrid ANC" },
+        { "key": "Battery Life", "value": "30 hours" },
+        { "key": "Connectivity", "value": "Bluetooth 5.0" }
+      ],
+      "availability": true,
+      "rating": 4.6
+    }
+  ]
