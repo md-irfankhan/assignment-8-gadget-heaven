@@ -2,7 +2,7 @@ import BannerImg from '../../assets/banner.jpg'
 
 const Banner = () => {
     return (
-        <div className="max-w-[1300px] mx-auto relative -top-16 p-2 rounded-2xl border border-base-200 bg-base-300/[0.6] backdrop-blur-md">
+        <div className="max-w-[1300px] mx-auto relative -top-16 p-2 rounded-2xl border border-base-200 bg-base-300/[0.6] backdrop-blur-md lg:mb-60">
             <div className='bg-[#9538E2] rounded-2xl pt-25 lg:pb-70'>
                 <div className='flex max-w-[340px] mx-auto gap-2 flex-col text-white justify-center items-center text-center'>
                     <h1 className="font-bold text-3xl">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
