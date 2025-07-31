@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import './Home.css'
+import Card from '../Card/Card';
 const Home = () => {
     const [product, setProduct] = useState([]);
     const [filProduct, setFilProduct] = useState([]);
@@ -44,18 +45,22 @@ const Home = () => {
             <div>
                 <h1 className='font-bold text-3xl text-center py-3'>Explore Cutting-Edge Gadgets</h1>
             </div>
-            <div className='flex max-w-[1250px] mx-auto'>
+            <div className='flex flex-col lg:flex-row max-w-[1250px] mx-auto gap-4 mb-5'>
                 {/* Category  */}
-                <div className='bg-white rounded-2xl p-4 flex lg:flex-col flex-wrap gap-3'>
+                <div className=''>
 
-                    {
+                  <div className='bg-white rounded-2xl  p-4 flex lg:flex-col flex-wrap gap-3'>
+                      {
                         category.map((category, idx) => <button key={idx} onClick={() => handleCategory(idx, category)} className={`rounded-full bg-base-200 py-[11px] px-[20px] ${active===idx ? 'active':''}`}>{category}</button>)
                     }
+                  </div>
 
                 </div>
                 {/* Display  */}
-                <div className='flex-1'>
-                    
+                <div className='flex-1 grid grid-cols-1 lg:grid-cols-3 gap-3 '>
+                    {
+                        filProduct.map(product=><Card product={product}></Card>)
+                    }
 
                 </div>
             </div>
