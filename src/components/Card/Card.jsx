@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 
 const Card = ({product}) => {
@@ -11,7 +12,7 @@ const Card = ({product}) => {
                 <h3 className="font-bold text-[20px]">{product_title}</h3>
                 <p className="opacity-[0.7] font-medium">Price:{price} $</p>
                 <div>
-                    <button className="border hover:bg-indigo-500/[0.3] border-[#9538E2] rounded-full text-[#9538E2] px-[19px] py-[10px] shadow font-medium">View Details  </button>
+                    <button className="border hover:bg-indigo-500/[0.3] border-[#9538E2] rounded-full text-[#9538E2] px-[19px] py-[10px] shadow font-medium"> <Link to={`/product/${(product.product_id).toLowerCase()}`}>View Details </Link></button>
                 </div>
             </div>
         </div>

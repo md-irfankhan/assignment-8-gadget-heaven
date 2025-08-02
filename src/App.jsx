@@ -8,7 +8,7 @@ function App() {
   
 
   return (
-    <div className='bg-base-200'>
+    <div >
      <Nav></Nav>
      <Outlet ></Outlet>
      <Footer></Footer>

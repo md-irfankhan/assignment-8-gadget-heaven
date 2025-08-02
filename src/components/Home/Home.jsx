@@ -40,7 +40,7 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div className='bg-base-200'>
             <Banner></Banner>
             <div>
                 <h1 className='font-bold text-3xl text-center py-3'>Explore Cutting-Edge Gadgets</h1>

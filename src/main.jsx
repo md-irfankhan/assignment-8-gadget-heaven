@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router";
 import Home  from './components/Home/Home';
+import ProductPage from './components/ProductPage/ProductPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>
+      },
+      {
+        path:'/product/:productId',
+        loader:()=>fetch('/api.json'),
+        element:<ProductPage></ProductPage>
       }
     ]
   },
