@@ -1,11 +1,15 @@
 
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { useContext } from 'react';
 import { useLocation } from 'react-router';
+import { CartContext } from '../../App';
+
 const Nav = () => {
     const location =useLocation().pathname;
     console.log(location=='/');
-    
+    const {lcart}=useContext(CartContext)
+   
     return (
         <div className="navbar bg-base-100 max-w-[1250px] mx-auto pt-6">
             <div className="navbar-start">
@@ -34,7 +38,7 @@ const Nav = () => {
             </div>
             <div className="navbar-end gap-2 z-10">
                 <div className="indicator">
-                    <span className="indicator-item rounded p-1 text-[12px] badge badge-secondary">12</span>
+                    <span className="indicator-item rounded p-1 text-[12px] badge badge-secondary">{lcart.length}</span>
                      <a className="bg-white p-1 rounded-full"><ShoppingCartOutlinedIcon className='h-3 w-3'></ShoppingCartOutlinedIcon></a>
                 </div>
                 <div className="indicator">

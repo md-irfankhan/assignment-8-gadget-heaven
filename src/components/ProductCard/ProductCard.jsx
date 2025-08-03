@@ -2,10 +2,14 @@ import Rating from '@mui/material/Rating';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import { addToCart } from '../../db/ldb';
+import { useContext } from 'react';
+import { CartContext } from '../../App';
 const ProductCard = ({ product }) => {
     const { product_image, product_title, price, availability, description, Specification, rating } = product
+    const {lcart,setLCart}=useContext(CartContext)
     const hanndleCart=(id)=>{
          addToCart(id);
+         setLCart([...lcart,id])     
     }
     return (
         <div className="bg-white relative -top-24  max-w-[1200px] mx-auto flex p-[32px] gap-6 rounded-2xl flex-col lg:flex-row shadow-sm">
