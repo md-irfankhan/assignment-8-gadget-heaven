@@ -6,28 +6,40 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router";
-import Home  from './components/Home/Home';
+import Home from './components/Home/Home';
 import ProductPage from './components/ProductPage/ProductPage.jsx';
+import Dashboard from './components/Dashboard/Dashboard.jsx';
+import Cart from './components/Cart/Cart.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<App></App>,
-    children:[
+    element: <App></App>,
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: '/',
+        element: <Home></Home>
       },
       {
-        path:'/product/:productId',
-        loader:()=>fetch('/api.json'),
-        element:<ProductPage></ProductPage>
+        path: '/product/:productId',
+        loader: () => fetch('/api.json'),
+        element: <ProductPage></ProductPage>
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+          {
+            path: 'cart',
+            element: <Cart></Cart>
+          }
+        ]
       }
     ]
   },
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <RouterProvider router={router} /> 
+    <RouterProvider router={router} />
   </StrictMode>,
 )

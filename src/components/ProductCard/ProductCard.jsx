@@ -1,8 +1,12 @@
 import Rating from '@mui/material/Rating';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import { addToCart } from '../../db/ldb';
 const ProductCard = ({ product }) => {
     const { product_image, product_title, price, availability, description, Specification, rating } = product
+    const hanndleCart=(id)=>{
+         addToCart(id);
+    }
     return (
         <div className="bg-white relative -top-24  max-w-[1200px] mx-auto flex p-[32px] gap-6 rounded-2xl flex-col lg:flex-row shadow-sm">
             <div className="bg-base-300 flex justify-center items-center rounded-2xl px-20">
@@ -33,7 +37,7 @@ const ProductCard = ({ product }) => {
                     
                 </div>
                 <div className='flex gap-2'>
-                    <button className='bg-[#9538E2] text-white flex gap-1 items-center py-2 px-3 rounded-full'>Add To Card
+                    <button onClick={()=>{hanndleCart(product.product_id)}} className='bg-[#9538E2] text-white flex gap-1 items-center py-2 px-3 rounded-full'>Add To Card
                         <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
                     </button>
                     <button className='border border-base-300 p-2 rounded-full'>
