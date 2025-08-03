@@ -51,7 +51,7 @@ const Home = () => {
 
                   <div className='bg-white rounded-2xl  p-4 flex lg:flex-col flex-wrap gap-3'>
                       {
-                        category.map((category, idx) => <button key={idx} onClick={() => handleCategory(idx, category)} className={`rounded-full bg-base-200 py-[11px] px-[20px] ${active===idx ? 'active':''}`}>{category}</button>)
+                        category.map((category, idx) => <button key={idx} onClick={() => handleCategory(idx, category)} className={`rounded-full bg-base-200 py-[11px] px-[20px] ${active===idx ? 'actived':''}`}>{category}</button>)
                     }
                   </div>
 
