@@ -1,7 +1,7 @@
 
 import ClearIcon from '@mui/icons-material/Clear';
 
-const CartCard = ({ product ,handleCartRemove}) => {
+const CartCard = ({ product ,handleCartRemove,handleWishListRemove}) => {
     const { product_title, product_image, price } = product
     
 
@@ -11,7 +11,7 @@ const CartCard = ({ product ,handleCartRemove}) => {
             <div className="flex-1">
                 <div className='flex items-center justify-between'>
                     <h1 className='font-semibold text-[24px]'>{product_title}</h1>
-                    <button onClick={() => handleCartRemove(product.product_id,product.price)} className='border hover:bg-red-300 border-red-500 p-1 text-red-500 rounded-full'><ClearIcon></ClearIcon></button>
+                    <button onClick={() => handleCartRemove(product.product_id,product.price)} onClick={()=>handleWishListRemove(product.product_id)} className='border hover:bg-red-300 border-red-500 p-1 text-red-500 rounded-full'><ClearIcon></ClearIcon></button>
                 </div>
                 <p className='text-[18px] opacity-[0.6]'>Ultra-slim, high-performance laptop with 13.4-inch Infinity Edge display.</p>
                 <p className='font-semibold text-[24px]'>Price:${price}</p>
