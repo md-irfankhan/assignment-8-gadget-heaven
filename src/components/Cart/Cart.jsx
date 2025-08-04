@@ -4,16 +4,18 @@ import SwapVertIcon from '@mui/icons-material/SwapVert';
 import CartCard from "../CartCard/CartCard";
 import { useContext } from 'react';
 import { CartContext } from '../../App';
-import { useCallback } from "react";
-import { useLoaderData } from "react-router";
+import SImage from '../../assets/Group.png'
+import { useLoaderData, useNavigate } from "react-router";
 import { toast } from "react-toastify";
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "flowbite-react";
 const Cart = () => {
-    const [product, setProduct] = useState([])
+    const [openModal, setOpenModal] = useState(false);
     const cartLs = getCart();
     const [cart, setCart] = useState([])
     const [total, setTotal] = useState(0)
     const { lcart, setLCart } = useContext(CartContext)
     const products = useLoaderData();
+    const navigate =useNavigate()
 
     // useEffect(() => {
     //     fetch('/api.json')
@@ -55,9 +57,9 @@ const Cart = () => {
             setTotal(totals)
         }
 
-    }, [cart,lcart])
+    }, [cart, lcart])
 
-    const handleCartRemove = (id,price) => {
+    const handleCartRemove = (id, price) => {
         let ccart = cartLs;
         ccart.splice(ccart.indexOf(id), 1)
         // setCart(ccart)
@@ -72,13 +74,13 @@ const Cart = () => {
 
                 const filtered = products.find(el => i == el.product_id)
                 console.log(filtered);
-                 
+
                 savedCart.push(filtered)
             }
 
         }
         setCart(savedCart)
-        setTotal(total-price)
+        setTotal(total - price)
 
 
         // let totals = 0
@@ -92,6 +94,15 @@ const Cart = () => {
 
 
     }
+    const handleModal=()=>{
+        setOpenModal(true)
+        saveCart([])
+    }
+    const handleModalClose =()=>{
+        navigate('/');
+        setOpenModal(false);
+        
+    }
 
     return (
         <div className="pt-7 bg-base-200 pb-7">
@@ -104,7 +115,7 @@ const Cart = () => {
                     <button className="flex items-center border border-[#9538E2] rounded-full py-1 px-3 text-[#9538E2] font-medium">Sort By Price
                         <SwapVertIcon></SwapVertIcon>
                     </button>
-                    <button style={{
+                    <button onClick={()=>handleModal()}  style={{
                         boxShadow: 'inset 0px 4px 50px 0px rgba(11, 11, 11, 0.15)'
                     }} className="bg-[#9538E2] py-1 px-3 rounded-full text-white font-medium">Purchase</button>
                 </div>
@@ -116,6 +127,25 @@ const Cart = () => {
                     cart.map((productt, idx) => <CartCard key={idx} handleCartRemove={handleCartRemove} product={productt}></CartCard>)
                 }
             </div>
+
+            <Modal  show={openModal} onClose={() => setOpenModal(false)} className="rounded-3xl" >
+                <ModalBody className="rounded-2xl">
+                  <div className="flex flex-col justify-center items-center p-10 rounded-2xl">
+                      <div>
+                        <img src={SImage} alt="" srcset="" />
+                      </div>
+                      <div className="flex flex-col items-center justify-center">
+                        <h1 className="font-bold text-[24px]">Payment Successfully</h1>
+                        <hr className="opacity-[0.3] my-2" />
+                        <p className="opacity-[0.5]">Thanks for purchasing.</p>
+                        <p className="opacity-[0.5]">Total: {total}</p>
+                        <button onClick={()=>handleModalClose()} >Close</button>
+                      </div>
+                  </div>
+                     
+                </ModalBody>
+
+            </Modal>
         </div>
     );
 };
