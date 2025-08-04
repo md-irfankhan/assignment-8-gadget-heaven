@@ -4,6 +4,7 @@ import CartCard from "../CartCard/CartCard";
 import { useLoaderData } from "react-router";
 import { useContext } from 'react';
 import { CartContext } from "../../App";
+import { Helmet } from "react-helmet-async";
 const WishList = () => {
     const { lwish, setLWish } = useContext(CartContext)
     const wishLs = getWishList();
@@ -38,6 +39,9 @@ const WishList = () => {
 
     return (
         <div className="pt-7 bg-base-200 pb-7">
+            <Helmet>
+                <title>Wish List</title>
+            </Helmet>
             <div className="max-w-[1250px] mx-auto">
                 <h1 className="text-[24px] font-bold pb-2">WishList</h1>
 

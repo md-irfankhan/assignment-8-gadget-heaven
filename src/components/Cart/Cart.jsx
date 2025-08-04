@@ -5,9 +5,12 @@ import CartCard from "../CartCard/CartCard";
 import { useContext } from 'react';
 import { CartContext } from '../../App';
 import SImage from '../../assets/Group.png'
-import { useLoaderData, useNavigate } from "react-router";
+import { useLoaderData, useLocation, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "flowbite-react";
+import HelmetExport from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 const Cart = () => {
     const [openModal, setOpenModal] = useState(false);
     const cartLs = getCart();
@@ -103,8 +106,12 @@ const Cart = () => {
         setOpenModal(false);
         
     }
-
+    const location=useLocation()
     return (
+        <>
+        <Helmet  key={location.pathname}>
+            <title>Cart</title>
+        </Helmet>
         <div className="pt-7 bg-base-200 pb-7">
             <div className="flex pb-4 flex-col lg:flex-row items-center justify-between max-w-[1250px] mx-auto">
                 <div>
@@ -147,6 +154,7 @@ const Cart = () => {
 
             </Modal>
         </div>
+        </>
     );
 };
 

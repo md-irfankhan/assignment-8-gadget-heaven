@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer'
 import { createContext } from 'react'
 import { useState } from 'react'
 import { getCart, getWishList } from './db/ldb'
+import { Helmet } from 'react-helmet-async'
 export const CartContext=createContext()
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
   const [lwish,setLWish]=useState(getWishList())
   return (
     <div >
+     
       <CartContext.Provider value={{lcart,setLCart,lwish,setLWish}} >
      <Nav></Nav>
      <Outlet ></Outlet>

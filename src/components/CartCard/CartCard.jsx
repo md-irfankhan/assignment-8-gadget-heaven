@@ -1,5 +1,7 @@
 
 import ClearIcon from '@mui/icons-material/Clear';
+import { Helmet } from 'react-helmet-async';
+
 import { useLocation } from 'react-router';
 
 const CartCard = ({ product ,handleCartRemove,handleWishListRemove}) => {
@@ -7,7 +9,13 @@ const CartCard = ({ product ,handleCartRemove,handleWishListRemove}) => {
     const location =useLocation().pathname;
 
     return (
+
         <div className="flex flex-col gap-2 lg:flex-row  p-4 max-w-[1250px] mx-auto bg-white rounded-2xl">
+            <Helmet>
+                {
+                    location=='/dashboard/cart'?<title>Cart</title>:<title>WishList</title>
+                }
+            </Helmet>
             <div className="bg-base-300 py-3 px-6 rounded flex justify-center items-center"><img className="h-15" src={product_image} alt="" /></div>
             <div className="flex-1">
                 <div className='flex items-center justify-between'>

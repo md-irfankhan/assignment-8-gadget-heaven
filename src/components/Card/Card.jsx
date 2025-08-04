@@ -1,10 +1,15 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router";
 
 
-const Card = ({product}) => {
-    const {product_title,product_image,price}=product
+const Card = ({ product }) => {
+    const { product_title, product_image, price } = product
     return (
+
         <div className="bg-white shadow-sm h-87 rounded-2xl p-3">
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
             <div className="h-[180px] bg-base-300 w-auto flex justify-center items-center rounded-2xl">
                 <img className=" h-[150px]" src={product_image} alt="" />
             </div>

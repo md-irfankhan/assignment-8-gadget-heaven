@@ -1,5 +1,6 @@
 import { BarChart } from '@mui/x-charts/BarChart';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router';
 
 const Statistics = () => {
@@ -17,6 +18,9 @@ const Statistics = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Statistics</title>
+            </Helmet>
             <div className="bg-[#9538E2] text-white text-center pt-7 pb-7">
                 <h1 className="font-bold text-2xl pb-2">Statistics</h1>
                 <p className="text-[14px] opacity-[0.8] pb-2">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
