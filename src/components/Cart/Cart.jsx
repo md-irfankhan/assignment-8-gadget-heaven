@@ -124,7 +124,7 @@ const Cart = () => {
             </div>
             <div className="flex flex-col gap-2">
                 {
-                    cart.map((productt, idx) => <CartCard key={idx} handleCartRemove={handleCartRemove} product={productt}></CartCard>)
+                   cart.length!==0? cart.map((productt, idx) => <CartCard key={idx} handleCartRemove={handleCartRemove} product={productt}></CartCard>):<h1 className="text-2xl">No data here</h1>
                 }
             </div>
 

@@ -1,10 +1,10 @@
-import { NavLink, Outlet } from "react-router";
+import { NavLink, Outlet} from "react-router";
 import './Dashboard.css'
 
 
 
 const Dashboard =() => {
-  
+    
     return (
         <div>
             <div className="bg-[#9538E2] text-white text-center pt-7 pb-7">

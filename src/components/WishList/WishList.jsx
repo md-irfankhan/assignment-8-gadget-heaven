@@ -1,9 +1,11 @@
-import { getWishList } from "../../db/ldb";
+import { getWishList, saveWishList } from "../../db/ldb";
 import { useState, useEffect } from "react";
 import CartCard from "../CartCard/CartCard";
 import { useLoaderData } from "react-router";
+import { useContext } from 'react';
+import { CartContext } from "../../App";
 const WishList = () => {
-    const [product, setProduct] = useState([])
+    const { lwish, setLWish } = useContext(CartContext)
     const wishLs = getWishList();
     const [wish, setWish] = useState([])
     const products=useLoaderData()
@@ -23,6 +25,9 @@ const WishList = () => {
 
    const handleWishListRemove=(id)=>{
     const filtered=wish.filter(el=>el.product_id !==id);
+    const lfiltered=lwish.filter(el=>el!==id)
+    setLWish(lfiltered)
+    saveWishList(lfiltered)
     setWish(filtered)
 
    }
@@ -39,7 +44,7 @@ const WishList = () => {
 
                 <div className="flex flex-col gap-2">
                     {
-                        wish.map((productt, idx) => <CartCard key={idx} product={productt} handleWishListRemove={handleWishListRemove}></CartCard>)
+                      wish.length!==0?  wish.map((productt, idx) => <CartCard key={idx} product={productt} handleWishListRemove={handleWishListRemove}></CartCard>):<h1 className="text-2xl">No data here</h1>
                     }
                 </div>
             </div>

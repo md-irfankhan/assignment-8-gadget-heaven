@@ -36,4 +36,4 @@ const addToWishList=(id)=>{
     
     saveWishList(wishlist)
 }
-export {getCart,addToCart,getWishList,addToWishList,saveCart}
+export {getCart,addToCart,getWishList,addToWishList,saveCart,saveWishList}
