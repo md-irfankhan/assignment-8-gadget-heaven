@@ -1,17 +1,28 @@
 import Rating from '@mui/material/Rating';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import { addToCart } from '../../db/ldb';
+import { addToCart, addToWishList, getWishList } from '../../db/ldb';
 import { useContext } from 'react';
 import { CartContext } from '../../App';
 import {  toast } from 'react-toastify';
 const ProductCard = ({ product }) => {
     const { product_image, product_title, price, availability, description, Specification, rating } = product
-    const {lcart,setLCart}=useContext(CartContext)
+    const {lcart,setLCart,lwish,setLWish}=useContext(CartContext)
     const hanndleCart=(id)=>{
          addToCart(id);
          setLCart([...lcart,id])
          toast.success('Product added to cart');     
+    }
+    const hanndleWishList =(id)=>{
+        
+        if(!getWishList().includes(id)){
+         addToWishList(id)
+          setLWish([...lwish,id]);
+          toast.success('Product added to Wish List'); 
+        }else{
+            toast.info('Product already in Wish List')
+        }
+        
     }
     return (
         <div className="bg-white relative -top-24  max-w-[1200px] mx-auto flex p-[32px] gap-6 rounded-2xl flex-col lg:flex-row shadow-sm">
@@ -46,7 +57,7 @@ const ProductCard = ({ product }) => {
                     <button onClick={()=>{hanndleCart(product.product_id)}} className='bg-[#9538E2] text-white flex gap-1 items-center py-2 px-3 rounded-full'>Add To Card
                         <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
                     </button>
-                    <button className='border border-base-300 p-2 rounded-full'>
+                    <button onClick={()=>hanndleWishList(product.product_id)} className='border border-base-300 p-2 rounded-full'>
                         <FavoriteBorderOutlinedIcon></FavoriteBorderOutlinedIcon>
                     </button>
                 </div>

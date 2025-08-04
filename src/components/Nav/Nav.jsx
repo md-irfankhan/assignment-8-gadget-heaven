@@ -8,7 +8,7 @@ import './Nav.css'
 const Nav = () => {
     const location = useLocation().pathname;
     console.log(location == '/');
-    const { lcart } = useContext(CartContext)
+    const { lcart, lwish } = useContext(CartContext)
 
     return (
         <div className="navbar bg-base-100 max-w-[1250px] mx-auto pt-6">
@@ -41,7 +41,7 @@ const Nav = () => {
                     <a className="bg-white p-1 rounded-full"><ShoppingCartOutlinedIcon className='h-3 w-3'></ShoppingCartOutlinedIcon></a>
                 </div>
                 <div className="indicator">
-                    <span className="indicator-item rounded p-1 text-[12px] badge badge-secondary">12</span>
+                    <span className="indicator-item rounded p-1 text-[12px] badge badge-secondary">{lwish.length}</span>
                     <a className="bg-white p-1 rounded-full"><FavoriteBorderOutlinedIcon className='h-3 w-3'></FavoriteBorderOutlinedIcon></a>
                 </div>
 
